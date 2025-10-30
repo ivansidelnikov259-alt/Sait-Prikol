@@ -1,112 +1,359 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <!-- Важная мета-информация для корректного отображения на мобильных устройствах --> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная - SiteFactory</title>
-    <meta name="description" content="Домашняя страница компании по созданию сайтов SiteFactory">
-    <!-- Подключение фавиконки -->
-    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
-    <!-- Open-Graph мета-теги -->
-    <meta property="og:type" content="website"> 
-    <meta property="og:title" content="SiteFactory - Фабрик сайтов"> 
-    <meta property="og:description" content="Создадим веб-сайт любой сложности с полного нуля до деплоя с использованием передовых технологий."> 
-    <meta property="og:image" content="https://avatars.mds.yandex.net/get-ydo/2426891/2a0000016e86f9a4690412cade1e654d6a72/diploma">
-    <!-- Подключение стилей и скриптов -->
-    <link rel="stylesheet" href="./src/styles/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ISAREVA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container-fluid">
-        <header class="header d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-            <div class="header__logo col-md-3 mb-2 mb-md-0">
-                <a href="./index.html" class="d-inline-flex link-body-emphasis text-decoration-none">
-                    <img src="./assets/favicon.ico" width=50px height=50px>
-                </a>
-            </div>
-            
-            <!-- Главное навигационное меню -->
-            <nav class="header__nav">
-                <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="./index.html" class="nav-link px-2 link-secondary disabled">Главная</a></li>
-                    <li><a href="./src/about.html" class="nav-link px-2">О нас</a></li>
-                    <li><a href="./src/contacts.html" class="nav-link px-2">Контакты</a></li>
-                    <li><a href="./src/feedback.html" class="nav-link px-2">Обратная связь</a></li>
-                </ul>
-            </nav>
-        
-            <div class="header__account col-md-3 text-end">
-                <button type="button" class="btn btn-outline-primary my-1">Войти</button>
-                <button type="button" class="btn btn-primary">Регистрация</button>
-            </div>
-        </header>
-    </div>
+<!-- ---------------------------------Шапка--------------------------------------- -->
+    <header>
+		<nav class="navbar navbar-expand-lg">
+			<div class="container">
+				<img class="logo" src="/assets/Logo.png" alt="Logo">
 
-    <!-- Уникальное основное содержимое страницы -->
-    <main class="main">
-        <div class="container-sm">
-            
-            <!-- Секция 1 с якорем -->
-            <section class="welcome text-center bg-body-tertiary rounded-3 border py-5">
-                <h1 class="welcome__title">Добро пожаловать на наш сайт!</h1>
-                <h2 class="welcome__subtitle text-dark-emphasis mt-3">Наши услуги</h2>
-                <p class="welcome__description text-dark-emphasis">Мы предоставляем услуги разработки сайтов с полного нуля до развёртки сайта с использованием самых современных технологий.</p>
-                <!-- Якорная ссылка внутри страницы -->
-                <a href="#contacts" class="btn btn-outline-primary">Связаться с нами</a>
-            </section>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+				<span class="navbar-toggler-icon"></span>
+				</button>
 
-            <!-- Секция 2 с якорем -->
-            <section class="portfolio text-center bg-body-emphasis mt-5">
-                <h1 class="portfolio__title">Портфолио</h1>
-                <h2 class="portfolio__subtitle text-dark-emphasis mt-3">Реальные проекты для реальных клиентов</h2>
-                <p class="portfolio__description text-dark-emphasis mt-3">Каждый сайт — это решение конкретной бизнес-задачи, реализованное с учётом целей, аудитории и трендов. Здесь — не просто портфолио, а живые кейсы, в которых идеи превращаются в эффективные цифровые продукты, а эффективные цифровые продукты - в измеримые результаты: рост трафика, увеличение конверсий и лояльность пользователей.</p>
-                <div id="carouselIndicators" class="carousel slide">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+					<a class="nav-link" aria-current="page" href="#">About</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" href="#">Features</a>
+					</li>
+
+					<!-- <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Выпадающий список
+					</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Действие</a></li>
+						<li><a class="dropdown-item" href="#">Другое действие</a></li>
+						<li><hr class="dropdown-divider"></li>
+						<li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
+					</ul>
+					</li> -->
+
+					<li class="nav-item">
+					<a class="nav-link" href="#">Pricing</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" href="#">Testimonials</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" style="margin-right: 0;" href="#">Help</a>
+					</li>
+				</ul>
+				
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0" style=" margin-right: 0 !important;">
+					<li class="nav-item">
+					<a class="nav-link" style="margin-right: 14.09px;" aria-current="page" href="#">Sign In</a>
+					</li>
+					</ul>
+					<button class="btn__up" type="submit">Sign Up</button>
+				
+				</div>
+			</div>
+		</nav>
+	</header>
+
+
+	<main>
+<!-- ---------------------------------Слайд 1--------------------------------------- -->
+		<section>
+			<section class="img__intro">
+				<div class="container">
+					<div class="intro__LaslesVPN">
+						Want anything to be <br> easy with <span class="fw-bold">LaslesVPN</span>.
+					</div>
+					<div class="inf__LaslesVPN">
+						Provide a network for all your needs with ease and fun using <span class="fw-bold">LaslesVPN</span> <br>
+						discover interesting features from us.
+					</div>
+				<div>
+					<button class="btn__st">Get Started</button>
+					
+				</div>
+			</div>
+			</section >
+			<section class="table__servis">
+				<div class="container text-center">
+					<div class="row align-items-center">
+						<div class="col">
+						<i class="bi bi-person-fill"></i>
+						90+<br>Users
+						</div>
+						<div class="col-1">
+						<img src="/assets/Vector.png" alt="Vector">
+						</div>
+						<div class="col">
+						<i class="bi bi-geo-alt-fill"></i>
+						30+<br>Locations
+						</div>
+						<div class="col-1">
+						<img src="/assets/Vector.png" alt="Vector">
+						</div>
+						<div class="col">
+						<i class="bi bi-hdd-stack-fill"></i>
+						50+<br>Servers
+						</div>
+					</div>
+				</div>
+			</section>
+		</section>
+
+<!-- ---------------------------------Слайд 2--------------------------------------- -->
+		<section class="intro__features ">
+			<div class="container d-flex justify-content-end">
+					<div>
+					<div class="intro__h">
+						We Provide Many<br>Features You Can Use
+					</div>
+					<div class="inf__feat">
+						You can explore the features that we provide with fun and <br>
+						have their own functions each feature.
+					</div>
+					<div class="stats__feat">
+						<nav>
+							<li>
+								<i class="bi bi-check-circle-fill"></i>
+								Powerfull online protection.
+							</li>
+							<li>
+								<i class="bi bi-check-circle-fill"></i>
+								Internet without borders.
+							</li>
+							<li>
+								<i class="bi bi-check-circle-fill"></i>
+								Supercharged VPN
+							</li>
+							<li>
+								<i class="bi bi-check-circle-fill"></i>
+								No specific time limits.
+							</li>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</section>
+
+<!-- ---------------------------------Слайд 3--------------------------------------- -->
+		<section class="intro__plan">
+			<div class="container">
+				<div class="intro__h intro__title text-center">
+					Choose Your Plan</div>
+					<div class="intro__line text-center">
+					Let's choose the package that is best for you and <br>
+					explore it happily and cheerfully.</div>
+				<div class="container">	
+					<section class="tarifs">
+						<div  class="row">
+							<div class="col one__card">
+								<div class="card text-center" style="width: 18rem;">
+									<div class="text-center">
+										<img src="/assets/Free.png" class="img__full" alt="Free Plan">
+									</div>	
+									<div class="card-body">
+										<h3 class="card-full">Free Plan</h3>
+											<nav class="plan__full text-start">
+												<li>
+													<i class="bi bi-check-lg"></i>
+													Unlimited Bandwitch</li>
+												<li>
+													<i class="bi bi-check-lg"></i>
+													Encrypted Connection</li>
+												<li>
+													<i class="bi bi-check-lg"></i>
+													No Traffic Logs</li>
+												<li>
+													<i class="bi bi-check-lg"></i>
+													Works on All Devices</li>
+											</nav>
+										
+										<div class="mod__free">Free</div>
+										<button class="btn__select active">Select</button>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col">
+								<div class="card text-center" style="width: 18rem;">
+									<div class="text-center">
+										<img src="/assets/Standard.png" class="img__full" alt="Standard Plan">
+									</div>	
+									<div class="card-body">
+										<h3 class="card-full">Standard Plan</h3>
+											<nav class="plan__full text-start">
+												<li>
+													<i class="bi bi-check-lg"></i>
+													Unlimited Bandwitch</li>
+												<li>
+													<i class="bi bi-check-lg"></i>
+													Encrypted Connection</li>
+												<li>
+													<i class="bi bi-check-lg"></i>
+													Yes Traffic Logs</li>
+												<li>
+													<i class="bi bi-check-lg"></i>
+													Works on All Devices</li>
+												<li>
+													<i class="bi bi-check-lg"></i>
+													Connect Anyware</li>
+											</nav>
+										
+										<div class="mod__stan">$9 <span class="txt__stan">/ mo</span></div>
+
+										<button class="btn__select">Select</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="card text-center" style="width: 18rem;">
+									<div class="text-center">
+										<img src="/assets/Premium.png" class="img__full" alt="Premium Plan">
+									</div>	
+									<div class="card-body">
+										<h3 class="card-full">Premium Plan</h3>
+											<nav class="plan__full text-start">
+												<li>
+													<i class="bi bi-check-lg"></i>
+													Unlimited Bandwitch</li>
+												<li>
+													<i class="bi bi-check-lg"></i>
+													Encrypted Connection</li>
+												<li>
+													<i class="bi bi-check-lg"></i>
+													Yes Traffic Logs</li>
+												<li>
+													<i class="bi bi-check-lg"></i>
+													Works on All Devices</li>
+												<li>
+													<i class="bi bi-check-lg"></i>
+													Connect Anyware</li>
+												<li>
+													<i class="bi bi-check-lg"></i>
+													Get New Features</li>
+											</nav>
+										
+										<div class="mod__prem">$12 <span class="txt__prem">/ mo</span></div>
+
+										<button class="btn__select">Select</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+		</section>
+
+<!-- ---------------------------------Слайд 4--------------------------------------- -->
+		<section class="intro__network">
+			<div class="container">
+				<div class="intro__h intro__title text-center">
+					Huge Global Network <br>
+					of Fast VPN</div>
+				<div class="intro__line text-center">See LaslesVPN everywhere to make it easier for you when you move <br>
+					locations.</div>
+				<div class="img__network text-center">
+					<img src="/assets/Huge Global Cart.png" class="img-fluid" alt="Cart Network">
+				</div>
+			</div>
+			<section class="table__sites">
+				<div class="container text-center">
+					<div class="row align-items-center">
+						<div class="col">
+						<img src="/assets/Netflix.png" alt="Netflix">
+						</div>
+						<div class="col">
+						<img src="/assets/Reddit.png" alt="Reddit">
+						</div>
+						<div class="col">
+						<img src="/assets/Amazon.png" alt="Amazon">
+						</div>
+						<div class="col">
+						<img src="/assets/Discord.png" alt="Discord">
+						</div>
+						<div class="col">
+						<img src="/assets/Spotify.png" alt="Spotify">
+						</div>
+					</div>
+				</div>
+			</section>
+		</section>
+	</main>
+
+<!-- ---------------------------------Подвал--------------------------------------- -->
+	<footer class="intro__footer">
+    <div class="container">
+        <div class="row top">
+            <div class="col-12 col-md-5">
+                <section class="company">
+                    <img src="/assets/Logo.png" alt="LaslesVPN">
+                    <div class="inf__LaslesVPN"> 
+                        <span class="fw-bold">LaslesVPN</span> is a private virtual network that <br>
+                        has unique features and has high security.
                     </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                        <img src="https://placehold.jp/b8b8b8/828282/1920x1080.png" class="d-block w-100">
-                        </div>
-                        <div class="carousel-item">
-                        <img src="https://placehold.jp/8f8f8f/6b6b6b/1920x1080.png" class="d-block w-100">
-                        </div>
-                        <div class="carousel-item">
-                        <img src="https://placehold.jp/757575/a6a6a6/1920x1080.png" class="d-block w-100">
-                        </div>
+                    <div class="d-flex align-items-center soft__sity">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Предыдущий</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Следующий</span>
-                    </button>
+                    <div class="vod__z pb-1 opacity-25">©2020Lasles<span class="fw-bold">VPN</span></div>
+                </section>
+            </div>
+            <div class="col-6 col-md-2">
+                <div class="stats__feat">
+                    <p class="intro__h fs-4">Product</p>
+                    <nav>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none">Download</a></li>
+                            <li><a href="#" class="text-decoration-none">Pricing</a></li>
+                            <li><a href="#" class="text-decoration-none">Locations</a></li>
+                            <li><a href="#" class="text-decoration-none">Server</a></li>
+                            <li><a href="#" class="text-decoration-none">Countries</a></li>
+                            <li><a href="#" class="text-decoration-none">Blog</a></li>
+                        </ul>
+                    </nav>
                 </div>
-            </section>
-
-            <!-- Секция 3 с якорем -->
-            <section id="contacts" class="contacts text-center bg-body-emphasis mt-5">
-                <h1 class="contacts__title">Контактная информация</h2>
-                <h2 class="contacts__subtitle text-dark-emphasis mt-3">Понравились наши проекты?</h2>
-                <p class="contacts__description text-dark-emphasis mt-3">Давайте поговорим! Чтобы обсудить Ваш уникальный кейс, получить индивидуальную консультацию или заказать проект — просто напишите нам на почту или позвоните одному из наших менеджеров.</p>
-                <a href="src/contacts.html" class="contacts__link btn btn-outline-primary">Подробнее</a> <!-- Ссылка на отдельную страницу -->
-            </section>
+            </div>
+            
+            <div class="col-6 col-md-2 intro__Engage">
+                <div class="stats__feat">
+                    <p class="intro__h fs-4">Engage</p>
+                    <nav>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none">LaslesVPN ?</a></li>
+                            <li><a href="#" class="text-decoration-none">FAQ</a></li>
+                            <li><a href="#" class="text-decoration-none">Tutorials</a></li>
+                            <li><a href="#" class="text-decoration-none">About Us</a></li>
+                            <li><a href="#" class="text-decoration-none">Privacy Policy</a></li>
+                            <li><a href="#" class="text-decoration-none">Terms of Service</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-3">
+                <div class="stats__feat">
+                    <p class="intro__h fs-4">Earn Money</p>
+                    <nav>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none">Affiliate</a></li>
+                            <li><a href="#" class="text-decoration-none">Become Partner</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
-    </main>
-
-    <!-- Подвал сайта -->
-    <footer class="footer mt-5 p-5 text-center text-secondary border-top">
-        <div class="container-sm">
-            <p class="footer__copy">&copy; 2023 SiteFactory. Все права защищены.</p>
-            <p class="footer__phone">Телефон: +7 (123) 456-78-90</p>
-            <a href="https://www.flaticon.com/ru/free-icons/" class="footer__icon-link" title="фабрика иконки">Иконка сайта взята от srip - Flaticon</a>
-        </div>
-    </footer>
+    </div>
+</footer>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
 </body>
 </html>

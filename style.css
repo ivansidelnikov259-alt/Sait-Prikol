@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/*---------------------------------Общее---------------------------------------*/
+body{
+font-family: 'Rubik';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 28px;
+color: #4F5665;
+background-color: #FFFFFF;
+}
+
+.intro__h{
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 46px;
+	color: #0B132A;
+}
+
+.intro__title{
+	padding-top: 70px;
+}
+
+.intro__line{
+	padding-top: 20px;
+}
+
+.inf__LaslesVPN .fw-bold{
+	font-weight: 500 !important;
+}
+/*---------------------------------Шапка---------------------------------------*/
+.container{
+	padding: 0;
+}
+
+.navbar{
+	margin-top: 45px;
+	padding: 0;
+	margin-bottom: 50px;
+
+}
+.logo{
+	margin-right: 150px;
+}
+
+.nav-link{
+	margin-right: 40px;
+}
+
+.btn__up{
+
+	padding: 6px 21px;
+	background-color: #FFFFFF;
+	color: #F53855;
+	border: 0.5px solid #F53855;
+	border-radius: 25px;
+	font-weight: 500;
+}
+
+.btn__up:hover{
+	background-color: #F53855;
+	border-color: #F53855;
+	color:#FFFFFF;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px #F53838;
+	transition: 0.3s ease;
+}
+
+/*---------------------------------Слайд 1---------------------------------------*/
+
+.intro__LaslesVPN{
+font-weight: 500;
+font-size: 44px;
+line-height: 56px;
+color: #0B132A;
+}
+
+
+.intro__LaslesVPN .fw-bold{
+	font-weight: 700 !important;
+}
+.inf__LaslesVPN{
+	margin-top: 20px;
+}
+
+
+.btn__st{
+	margin-top: 46px;
+	padding: 8px 36px;
+	background: #F53838;
+	border: none;
+	border-radius: 10px;
+	color: #FFFFFF;
+}
+
+.btn__st:hover{
+	color:#FFFFFF;
+	transform: translateY(-2px);
+	box-shadow: 0 5px 8px #F53838;
+	transition: 0.3s ease;
+}
+
+.img__intro .container{
+	padding-top: 30px;
+	background-image: url(/assets/Illustr\ 1.png);
+	background-repeat: no-repeat;
+	background-position: right top;
+	height: 360px;
+	
+}
+
+.table__servis{
+	padding-top: 120px;
+	padding-bottom: 70px;
+}
+
+/*---------------------------------Слайд 2---------------------------------------*/
+
+
+
+.inf__feat{
+	margin-top: 20px;
+}
+
+.stats__feat{
+	list-style: none;
+	margin-top: 20px;
+}
+
+.stats__feat li{
+	padding-bottom: 12px;
+}
+
+.stats__feat i{
+	padding-right: 10px;
+	color: #2FAB73;
+}
+
+.intro__features .container{
+	/* padding-top: 70px; */
+	background-image: url(/assets/Illustr\ 2.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 390px;
+
+}
+
+.intro__features{
+	padding-top: 70px;
+	background-color:#fffbf6;
+	height: 500px;
+	/* display: flex;
+	align-items: center; */
+	padding-bottom: 70px;
+}
+
+/*---------------------------------Слайд 3---------------------------------------*/
+
+.tarifs{
+	padding-top: 60px;
+}
+
+.btn__select, .btn__select.active:hover{
+	border: 1px solid #F53838;
+	border-radius: 225px;
+	padding: 6px 75px;
+	background-color: #FFFFFF;
+	color: #F53838;
+	font-weight: 500;
+	}
+
+.btn__select:hover, .btn__select.active{
+	background-color: #F53838;
+	border-color: #F53838;
+	color:#FFFFFF;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px #F53838;
+	transition: 0.3s ease;
+}
+
+.plan__full{
+	list-style: none;
+	padding: 30px 4px 0 4px;
+}
+
+.plan__full li{
+	padding-bottom: 12px;
+}
+
+.plan__full i{
+	padding-right: 20px;
+	color: #2FAB73;
+}
+
+.mod__free{
+	padding-bottom: 42px;
+	padding-top: 139px;	
+	font-weight: 500;
+	font-size: 48px;
+	line-height: 14px;
+	text-align: center;
+	color: #0B132A;
+}
+
+.one__card{
+	padding-left: 100px;
+}
+.card-full{
+	margin-bottom: 0;
+	padding-top: 30px;
+}
+
+.img__full{
+	margin-top: 70px;
+}
+
+.mod__stan{
+	padding-bottom: 40px;
+	padding-top: 85px;
+	font-weight: 500;
+	font-size: 48px;
+	line-height: 14px;
+	text-align: center;
+	color: #0B132A;
+}
+
+.txt__stan, .txt__prem{
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 28px;
+	color: #4F5665;
+	background-color: #FFFFFF;
+}
+
+.mod__prem{
+	padding-bottom: 40px;
+	padding-top: 45px;
+	font-weight: 500;
+	font-size: 48px;
+	line-height: 14px;
+	text-align: center;
+	color: #0B132A;
+}
+
+.intro__plan{
+	padding-bottom: 70px;
+}
+
+/*---------------------------------Слайд 4---------------------------------------*/
+
+.img__network{
+	padding-top: 140px;
+}
+
+.table__sites{
+	padding-top: 30px;
+	padding-bottom: 70px;
+}
+
+.intro__network{
+	background-color: #fffbf6;
+}
+
+/*---------------------------------Подвал---------------------------------------*/
+.company{
+	padding-top: 25px;
+}
+
+.soft__sity{
+	padding-top: 20px;
+}
+
+.soft__sity i{
+	padding-right: 20px;
+	color: #F53838;
+}
+
+.vod__z{
+	padding-top: 20px;
+	margin-bottom: 45px;
+}
+
+.intro__footer a{
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 28px;
+	color: #4F5665;
+}
+
+.intro__Engage{
+	padding-right: 100px;
+}
+
+.intro__footer{
+	padding-bottom: 70px;
+}
