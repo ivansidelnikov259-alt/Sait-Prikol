@@ -45,8 +45,8 @@ main {
 /* Accessibility */
 .skip-link {
     position: absolute;
-    inset-inline-start: var(--space-md);
-    inset-block-start: -100%;
+    left: var(--space-md);
+    top: -100%;
     z-index: 10000;
     padding: var(--space-sm) var(--space-md);
     background: #111;
@@ -57,7 +57,7 @@ main {
 
 .skip-link:focus,
 .skip-link:focus-visible {
-    inset-block-start: var(--space-md);
+    top: var(--space-md);
 }
 
 :focus-visible {
@@ -74,7 +74,8 @@ a, button {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding-inline: clamp(var(--space-md), calc(0.5rem + 1vw), var(--space-xl));
+    padding-left: clamp(var(--space-md), calc(0.5rem + 1vw), var(--space-xl));
+    padding-right: clamp(var(--space-md), calc(0.5rem + 1vw), var(--space-xl));
 }
 
 /* Typography */
@@ -103,9 +104,10 @@ a, button {
     position: sticky;
     top: 0;
     background: var(--lol-secondary);
-    padding-block-start: calc(0.75rem + env(safe-area-inset-top));
-    padding-block-end: 0.75rem;
-    padding-inline: calc(var(--space-md) + env(safe-area-inset-left));
+    padding-top: calc(0.75rem + env(safe-area-inset-top));
+    padding-bottom: 0.75rem;
+    padding-left: calc(var(--space-md) + env(safe-area-inset-left));
+    padding-right: calc(var(--space-md) + env(safe-area-inset-right));
     z-index: 100;
     isolation: isolate;
     box-shadow: var(--shadow);
@@ -478,28 +480,73 @@ a, button {
 /* Gallery Section */
 .gallery-section {
     padding: var(--space-2xl) 0;
+    background: var(--lol-secondary);
 }
 
-.gallery-grid {
+.gallery-grid-4x4 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--space-lg);
+    margin-top: var(--space-2xl);
 }
 
 .gallery-item {
+    position: relative;
     overflow: hidden;
     border-radius: var(--radius);
+    background: var(--lol-primary);
+    border: 1px solid rgba(200, 155, 60, 0.2);
+    transition: all 0.3s ease;
+    height: 300px;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--lol-accent);
+    box-shadow: 0 10px 25px rgba(200, 155, 60, 0.2);
 }
 
 .gallery-item img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
+    object-position: center;
     transition: transform 0.3s ease;
 }
 
 .gallery-item:hover img {
     transform: scale(1.05);
+}
+.gallery-item img.fix-Caitlyn {
+    object-position: center 25%;
+}
+.champion-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(10, 20, 40, 0.95));
+    padding: var(--space-lg);
+    color: var(--lol-light);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .champion-info {
+    transform: translateY(0);
+}
+
+.champion-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+    color: var(--lol-light);
+}
+
+.champion-role {
+    font-size: 0.9rem;
+    color: var(--lol-accent);
+    font-weight: 500;
 }
 
 /* Footer */
@@ -517,6 +564,10 @@ a, button {
 
 .footer-info img {
     margin-bottom: var(--space-lg);
+}
+
+.gallery-item img.fix-Ceytlin {
+    object-position: center 70%;
 }
 
 .footer-description {
@@ -656,8 +707,13 @@ a, button {
         grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     }
 
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    .gallery-grid-4x4 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+    }
+    
+    .gallery-item {
+        height: 250px;
     }
 
     .footer-content {
@@ -670,13 +726,32 @@ a, button {
     }
 }
 
+@media (max-width: 1200px) {
+    .gallery-grid-4x4 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media (min-width: 769px) and (max-width: 1024px) {
     .modes-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+}
 
-    .gallery-grid {
-        grid-template-columns: repeat(3, 1fr);
+@media (max-width: 480px) {
+    .gallery-grid-4x4 {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-item {
+        height: 280px;
+    }
+    
+    .champion-info {
+        transform: translateY(0);
+        position: relative;
+        background: var(--lol-primary);
+        padding: var(--space-md);
     }
 }
 
@@ -693,103 +768,5 @@ a, button {
     .btn-up,
     .btn-select {
         box-shadow: inset 0 0 0 2px #fff;
-    }
-}
-/* Галерея 4x4 */
-.gallery-section {
-    padding: var(--space-2xl) 0;
-    background: var(--lol-secondary);
-}
-
-.gallery-grid-4x4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-lg);
-    margin-top: var(--space-2xl);
-}
-
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: var(--radius);
-    background: var(--lol-primary);
-    border: 1px solid rgba(200, 155, 60, 0.2);
-    transition: all 0.3s ease;
-}
-
-.gallery-item:hover {
-    transform: translateY(-5px);
-    border-color: var(--lol-accent);
-    box-shadow: 0 10px 25px rgba(200, 155, 60, 0.2);
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.05);
-}
-
-.champion-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(transparent, rgba(10, 20, 40, 0.9));
-    padding: var(--space-lg);
-    color: var(--lol-light);
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
-}
-
-.gallery-item:hover .champion-info {
-    transform: translateY(0);
-}
-
-.champion-name {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: var(--space-sm);
-    color: var(--lol-light);
-}
-
-.champion-role {
-    font-size: 0.9rem;
-    color: var(--lol-accent);
-    font-weight: 500;
-}
-
-/* Адаптивность для галереи */
-@media (max-width: 1200px) {
-    .gallery-grid-4x4 {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .gallery-grid-4x4 {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--space-md);
-    }
-    
-    .gallery-item img {
-        height: 200px;
-    }
-}
-
-@media (max-width: 480px) {
-    .gallery-grid-4x4 {
-        grid-template-columns: 1fr;
-    }
-    
-    .champion-info {
-        transform: translateY(0);
-        position: relative;
-        background: var(--lol-primary);
-        padding: var(--space-md);
     }
 }
